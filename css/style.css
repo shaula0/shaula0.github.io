@@ -112,7 +112,7 @@ header>.container>nav>.gnb>li:not(.on)>a { color: #000000; }
 #contact>.container>.link>a { display: inline-block; height: 50px; transition: all 0.4s; } 
 #contact>.container>.link>a:nth-child(1) { margin-left: 0; width: 50px; height: 50px; } 
 #contact>.container>.link>a:nth-child(2) { margin-left: 20px; width: 50px; height: 50px; } 
-#contact>.container>.link>a>img { width: 50px; width: 50px; filter: invert(100%) } 
+#contact>.container>.link>a>img { width: 50px; width: 50px; filter: invert(100%); } 
 #contact>.container>.link>a>img:hover { filter: invert(64%) sepia(14%) saturate(852%) hue-rotate(203deg) brightness(89%) contrast(88%); } 
 
 /* footer */
