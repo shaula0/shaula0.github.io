@@ -1,4 +1,3 @@
-@charset "utf-8"; 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,500,700&display=swap'); 
 
 /* color: 070F2B 1B1A55 535C91 9290C3*/
@@ -70,8 +69,8 @@ header>.container>nav>.gnb>li:not(.on)>a { color: #000000; }
 #skills>.skill2>li:nth-child(6)>div { width: 120px; height: 120px; background-image: url(../images/skills/telescope.png); } 
 
 /* portfolio + popup gallery*/
-#portfolio>.portfolio_bg { display: none; position: fixed; left: 0; top: 0; z-index: 300; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); } 
-#portfolio>.portfolio_bg>.portfolio_img { position: fixed; left: 50%; top: 50%; z-index: 310; margin-top: -395px; margin-left: 0; width: 0px; height: 800px; overflow-y: scroll; } 
+#portfolio>.portfolio_bg { display: none; position: fixed; left: 0; top: 0; z-index: 20; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); } 
+#portfolio>.portfolio_bg>.portfolio_img { position: fixed; left: 50%; top: 50%; z-index: 21; margin-top: -395px; margin-left: 0; width: 0px; height: 800px; overflow-y: scroll; } 
 #portfolio>.portfolio_bg>.portfolio_img>.viewClose { display: block; height: 0px; text-indent: -9999px; background-color: #ffffff; } 
 
 /* portfolio */
@@ -117,5 +116,5 @@ header>.container>nav>.gnb>li:not(.on)>a { color: #000000; }
 
 /* footer */
 footer { width: 100%; height: 60px; background-color: #1B1A55; } 
-footer>address { padding-top: 20px; font-size: 14px; font-weight: 300; line-height: 1.6; text-align: center; }
-footer>address>a {color: #ffffff !important;} 
+footer>address { padding-top: 20px; font-size: 14px; font-weight: 300; line-height: 1.6; text-align: center; } 
+footer>address>a { color: #ffffff !important; } 
