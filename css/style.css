@@ -101,7 +101,7 @@ header>.container>nav>.gnb>li:not(.on)>a { color: #000000; }
 #portfolio>.container>.view>li>a:hover,#portfolio>.container>.view>li>a:focus { color: #ffffff; background-color: #9290C3; } 
 
 /* section - contact */
-#contact { position: relative; overflow: hidden; width: 100%; height: 860px; } 
+#contact { position: relative; overflow: hidden; width: 100%; height: 760px; } 
 #contact>h2 { position: absolute; right: 50%; top: 200px; margin-right: -450px; margin-bottom: 20px; font-size: 70px; font-weight: 500; letter-spacing: 1px; text-align: center; } 
 #contact>.contact_img { position: absolute; right: 50%; top: 300px; margin-right: -985px; width: 800px; height: 420px; background-image: url(../images/contact_banner.jpg); } 
 #contact>.container { position: absolute; top: 50%; left: 50%; margin-left: -400px; margin-top: -90px; text-align: center; } 

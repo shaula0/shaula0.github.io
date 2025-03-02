@@ -29,5 +29,4 @@ address,em{font-style:normal; font-weight:400;}
 
 .text-center{height:100px; line-height:100px; text-align:center;}
 .sr-only{display:none; text-indent:-9999px;}
-.clearfix{*zoom:1;}
-.clearfix:after{display:block; clear:both; content:'';}
+.clearfix::after{display:block; clear:both; content:'';}
