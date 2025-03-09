@@ -102,7 +102,7 @@ header>.container>nav>.gnb>li:not(.on)>a { color: #000000; }
 /* section - contact */
 #contact { position: relative; overflow: hidden; width: 100%; height: 760px; } 
 #contact>h2 { position: absolute; right: 50%; top: 200px; margin-right: -450px; margin-bottom: 20px; font-size: 70px; font-weight: 500; letter-spacing: 1px; text-align: center; } 
-#contact>.contact_img { position: absolute; right: 50%; top: 300px; margin-right: -985px; width: 800px; height: 420px; background-image: url(../images/contact_banner.jpg); } 
+#contact>.contact_img { position: absolute; right: 50%; top: 300px; margin-right: -543px; width: 358px; height: 430px; background-image: url(../images/contact.jpg); } 
 #contact>.container { position: absolute; top: 50%; left: 50%; margin-left: -400px; margin-top: -90px; text-align: center; } 
 #contact>.container>p { font-size: 20px; line-height: 1.8; letter-spacing: 1px; } 
 #contact>.container>p+p:before { content: '/'; display: block; padding: 20px 0; font-weight: 300; font-size: 30px; color: #9290C3; opacity: 0.3; } 
@@ -115,6 +115,6 @@ header>.container>nav>.gnb>li:not(.on)>a { color: #000000; }
 #contact>.container>.link>a>img:hover { filter: invert(64%) sepia(14%) saturate(852%) hue-rotate(203deg) brightness(89%) contrast(88%); } 
 
 /* footer */
-footer { width: 100%; height: 60px; background-color: #1B1A55; } 
-footer>address { padding-top: 20px; font-size: 14px; font-weight: 300; line-height: 1.6; text-align: center; } 
+footer { width: 100%; height: 80px; background-color: #1B1A55; } 
+footer>address { padding-top: 16px; font-size: 14px; font-weight: 300; line-height: 1.6; text-align: center; } 
 footer>address>a { color: #ffffff !important; } 
