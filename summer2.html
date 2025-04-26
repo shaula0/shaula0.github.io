@@ -17,23 +17,40 @@
         padding: 0;
         margin: 0;
         font-size: 58px;
+        box-sizing: border-box;
     }
 
     body {
         background-color: black;
         color: white;
-        display: table;
-        table-layout: fixed;
-        width: 100%;
-        min-height: 100vh;
-        text-align: center;
-
+        overflow: hidden;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
     }
 
     .container {
-        display: table-cell;
-        vertical-align: middle;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vh; /* 주의! 회전할 거라서 vh, vw 바꿔야 함 */
+        height: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rotate {
         transform: rotate(-90deg);
+        transform-origin: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
     }
 
     .date {
@@ -70,20 +87,22 @@
 
 <body>
     <div class="container">
-        <div id="date" class="date"></div>
-        <div id="time" class="time"></div>
-        <div class="pt-120">< 운영 중 · 예정 프로그램 ></div>
-        <p class="gray">< Current and Upcoming Programs ></p>
-        <div id="current_pg" class="pt-20"></div>
-        <p id="current_pg_en" class="gray"></p>
-        <div id="current_pg_sub" class="pt-20"></div>
-        <p id="current_pg_en_sub" class="gray"></p>
-        <div class="pt-120">< 상시 관람 ></div>
-        <p class="gray">< Open for viewing at all times ></p>
-        <div class="pt-20">2층 전시실 </div>
-        <p class="pt-20 gray">2nd floor exhibition</p>
-        <div>데스크에서 리플렛 받아가세요.</div>
-        <p class="gray">Please pick up a leaflet at the desk.</p>
+        <div class="rotate">
+            <div id="date" class="date"></div>
+            <div id="time" class="time"></div>
+            <div class="pt-120">< 운영 중 · 예정 프로그램 ></div>
+            <p class="gray">< Current and Upcoming Programs ></p>
+            <div id="current_pg" class="pt-20"></div>
+            <p id="current_pg_en" class="gray"></p>
+            <div id="current_pg_sub" class="pt-20"></div>
+            <p id="current_pg_en_sub" class="gray"></p>
+            <div class="pt-120">< 상시 관람 ></div>
+            <p class="gray">< Open for viewing at all times ></p>
+            <div class="pt-20">2층 전시실 </div>
+            <p class="pt-20 gray">2nd floor exhibition</p>
+            <div>데스크에서 리플렛 받아가세요.</div>
+            <p class="gray">Please pick up a leaflet at the desk.</p>
+        </div>
     </div>
 </body>
 
