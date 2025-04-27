@@ -16,8 +16,6 @@
     * {
         padding: 0;
         margin: 0;
-        font-size: 60px;
-        box-sizing: border-box;
     }
 
     body {
@@ -53,60 +51,56 @@
         height: 100%;
     }
 
-    .date {
-        color: white;
-    }
+    .time {font-weight: bold; color: yellow;}
 
-    .time {
-        font-weight: bold;
-        color: yellow;
-    }
+    .datetime {font-size: 60px;}
 
-    p {
-        font-size: 40px;
-    }
+    .current {font-size: 60px;}
+    .current-title {font-size: 90px; color: yellow;}
 
-    .pt-20 {
-        padding-top: 40px;
-    }
+    .alltimes {font-size: 40px;}
+    .alltimes-title {font-size: 60px;}
+    
+    .datetime > p, .current > p {font-size: 40px; color: #adadad;}
+    .alltimes > p {font-size: 32px; color: #adadad;}
 
-    .pt-120 {
-        padding-top: 200px;
-    }
-
-    .gray {
-        color: #adadad;
-    }
+    .pt-40 {padding-top: 40px;}
+    .pt-200 {padding-top: 200px;}
+    .pt-260 {padding-top: 260px;}
 </style>
 
 <html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-</head>
-
-<body>
-    <div class="container">
-        <div class="rotate">
-            <div id="date" class="date"></div>
-            <div id="time" class="time"></div>
-            <div class="pt-120">< 운영 중 · 예정 프로그램 ></div>
-            <p class="gray">< Current and Upcoming Programs ></p>
-            <div id="current_pg" class="pt-20"></div>
-            <p id="current_pg_en" class="gray"></p>
-            <div id="current_pg_sub" class="pt-20"></div>
-            <p id="current_pg_en_sub" class="gray"></p>
-            <div class="pt-120">< 상시 관람 ></div>
-            <p class="gray">< Open for viewing at all times ></p>
-            <div class="pt-20">2층 전시실 </div>
-            <p class="pt-20 gray">2nd floor exhibition</p>
-            <div>데스크에서 리플렛 받아가세요.</div>
-            <p class="gray">Please pick up a leaflet at the desk.</p>
+    <body>
+        <div class="container">
+            <div class="rotate">
+                <div class="datetime">
+                    <div id="date"></div>
+                    <div id="time" class="time"></div>
+                </div>
+                <div class="current pt-260">
+                    <div>< 지금 시각 프로그램 ></div>
+                    <p>< Current Program ></p>
+                    <div id="current_pg" class="pt-40 current-title"></div>
+                    <p id="current_pg_en"></p>
+                    <div id="current_pg_sub" class="pt-40"></div>
+                    <p id="current_pg_en_sub"></p>
+                </div>
+                <div class="alltimes pt-200">
+                    <div>< 상시 관람 ></div>
+                    <p>< Open for viewing at all times ></p>
+                    <div class="pt-40 alltimes-title">2층 전시실 </div>
+                    <p>2nd floor exhibition</p>
+                    <div class="pt-40">데스크에서 리플렛 받아가세요.</div>
+                    <p>Please pick up a leaflet at the desk.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</body>
-
+    </body>
 </html>
 
 <script type="text/javascript">
@@ -119,13 +113,11 @@
     var f1 = "1층 투영관";
     var f1_poetry_recitation = "1층 시낭송(예약자 우선)";
     var f1_music_concert = "1층 음악회(예약자 우선)";
-    var f1_time1 = ":58 입장 마감 / ";
-    var f1_time2 = ":00 시작 / 만 5세 이상";
-    var f1_time1_concert = ":58 예약자 입장 마감 / ";
-    var f1_time2_concert = ":00 시작 / 만 7세 이상";
+    var f1_time = ":58 입장 마감 / 만 5세 이상";
+    var f1_time_concert = ":58 예약자 입장 마감 / 만 7세 이상";
     var f3 = "3층 관측실";
-    var f3_time1 = ":25 입장 시작 / ";
-    var f3_time2 = ":45 입장 마감";
+    var f3_time1 = ":25 ~ ";
+    var f3_time2 = ":45";
     var end = "프로그램이 종료되었습니다.";
     var end_sub = "다음에 또 만나요.";
 
@@ -133,21 +125,18 @@
     var en_f1_poetry_recitation = "1st floor poetry recitation(Priority for reservations)";
     var en_f1_music_concert = "1st floor music concert(Priority for reservations)";
     var en_f1_time1 = "Last admission at ";
-    var en_f1_time2 = ":58 / Screening starts at ";
-    var en_f1_time3 = ":00 / 5 years and older";
+    var en_f1_time2 = ":58 / 5 years and older";
     var en_f1_time1_concert = "Last admission for reservation at ";
-    var en_f1_time2_concert = ":58 / Starts at ";
-    var en_f1_time3_concert = ":00 / 7 years and older"
+    var en_f1_time2_concert = ":58 / 7 years and older ";
     var en_f3 = "3rd floor observatory";
-    var en_f3_time1 = "Admission time at ";
-    var en_f3_time2 = ":25 / Last admission at ";
-    var en_f3_time3 = ":45";
+    var en_f3_time1 = ":25 ~ ";
+    var en_f3_time2 = ":45";
     var en_end = "The program has ended.";
     var en_end_sub = "See you again next time!"
 
     function setClock() {
         var date = new Date();
-        //var date = new Date("2025-04-27 14:00:00");
+        //var date = new Date("2025-04-22 18:00:00");
         var year = date.getFullYear();
         var month = date.getMonth() + 1;
         var day = date.getDate();
@@ -177,32 +166,32 @@
             current_pg_sub = "2" + f3_time1 + "2" + f3_time2;
 
             current_pg_en = en_f3;
-            current_pg_en_sub = en_f3_time1 + "2" + en_f3_time2 + "2" + en_f3_time3;
+            current_pg_en_sub = "2" + en_f3_time1 + "2" + en_f3_time2;
         }
         // 5시 45분 이상, 6시 58분 미만 = 투영실(7시)
         else if ((hour == 5 && min >= 45) || (hour == 6 && min < 58)) {
             // 화요일 7시일 경우 시낭송
             if (week == "화") {
                 current_pg = f1_poetry_recitation;
-                current_pg_sub = "6" + f1_time1_concert + "7" + f1_time2_concert;
+                current_pg_sub = "6" + f1_time_concert;
 
                 current_pg_en = en_f1_poetry_recitation;
-                current_pg_en_sub = en_f1_time1_concert + "6" + en_f1_time2_concert + "7" + en_f1_time3_concert;
+                current_pg_en_sub = en_f1_time1_concert + "6" + en_f1_time2_concert;
             }
             // 토요일 7시일 경우 음악회
             else if (week == "토") {
                 current_pg = f1_music_concert;
-                current_pg_sub = "6" + f1_time1_concert + "7" + f1_time2_concert;
+                current_pg_sub = "6" + f1_time_concert;
 
                 current_pg_en = en_f1_music_concert;
-                current_pg_en_sub = en_f1_time1_concert + "6" + en_f1_time2_concert + "7" + en_f1_time3_concert;
+                current_pg_en_sub = en_f1_time1_concert + "6" + en_f1_time2_concert;
             }
             else {
                 current_pg = f1;
-                current_pg_sub = "6" + f1_time1_concert + "7" + f1_time2_concert;
+                current_pg_sub = "6" + f1_time; 
     
                 current_pg_en = en_f1;
-                current_pg_en_sub =  en_f1_time1_concert + "6" + en_f1_time2_concert + "7" + en_f1_time3_concert;
+                current_pg_en_sub =  en_f1_time1 + "6" + en_f1_time2;
             }
         }
         // 9시 45분 이상 = 프로그램 X
@@ -218,10 +207,10 @@
             // 매시간 45분 이상, 58분 미만 = 투영실
             if (min >= 45 && min < 58) {
                 current_pg = f1;
-                current_pg_sub = hour + f1_time1 + (hour+1) + f1_time2;
+                current_pg_sub = hour + f1_time;
 
                 current_pg_en = en_f1;
-                current_pg_en_sub = en_f1_time1 + hour + en_f1_time2 + (hour+1) + en_f1_time3;
+                current_pg_en_sub = en_f1_time1 + hour + en_f1_time2;
             }
             // 매시간 58분 이상, 00분 미만 = 관측실 
             else if (min >= 58) {
@@ -229,14 +218,14 @@
                 current_pg_sub = (hour+1) + f3_time1 + (hour+1) + f3_time2;
     
                 current_pg_en = en_f3;
-                current_pg_en_sub = en_f3_time1 + (hour+1) + en_f3_time2 + (hour+1) + en_f3_time3;
+                current_pg_en_sub = (hour+1) + en_f3_time1 + (hour+1) + en_f3_time2;
             }
             else {
                 current_pg = f3;
                 current_pg_sub = hour + f3_time1 + hour + f3_time2;
     
                 current_pg_en = en_f3;
-                current_pg_en_sub = en_f3_time1 + hour + en_f3_time2 + hour + en_f3_time3;
+                current_pg_en_sub = hour + en_f3_time1 + hour + en_f3_time2;
             }
         }
 
