@@ -16,7 +16,7 @@
     * {
         padding: 0;
         margin: 0;
-        font-size: 58px;
+        font-size: 60px;
         box-sizing: border-box;
     }
 
@@ -63,15 +63,15 @@
     }
 
     p {
-        font-size: 30px;
+        font-size: 40px;
     }
 
     .pt-20 {
-        padding-top: 20px;
+        padding-top: 40px;
     }
 
     .pt-120 {
-        padding-top: 120px;
+        padding-top: 200px;
     }
 
     .gray {
@@ -83,6 +83,7 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 
 <body>
@@ -146,7 +147,7 @@
 
     function setClock() {
         var date = new Date();
-        //var date = new Date("2025-04-29 21:45:00");
+        //var date = new Date("2025-04-27 14:00:00");
         var year = date.getFullYear();
         var month = date.getMonth() + 1;
         var day = date.getDate();
@@ -171,7 +172,7 @@
         }
 
         // 2시 45분 미만 = 관측실(2시 25분)
-        if (am_pm == "오전" || hour == 2 && min < 45) {
+        if (am_pm == "오전" || am_pm == "오후" && hour < 2 || hour == 2 && min < 45) {
             current_pg = f3;
             current_pg_sub = "2" + f3_time1 + "2" + f3_time2;
 
